@@ -220,6 +220,7 @@ export default class Pokemon extends Component {
               <div className=" col-md-3 ">
                 <img
                   src={this.state.imageUrl}
+                  alt={this.state.name}
                   className="card-img-top rounded mx-auto mt-2"
                 />
               </div>
@@ -462,7 +463,7 @@ export default class Pokemon extends Component {
           </div>
           <div class="card-footer text-muted">
             Data provided by{' '}
-            <a href="https://pokeapi.co/" target="_blank" className="card-link">
+            <a href="https://pokeapi.co/" target="_blank" rel="noreferrer" className="card-link">
               PokeAPI.co
             </a>
           </div>

@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 
 const Sprite = styled.img`
-width: 8em;
-height: 8em;
+width:10em;
+height: 10em;
 display: none
 `
 
@@ -62,7 +62,7 @@ componentDidMount() {
                         <div className="card-header">
                             <h5 className="card-header">{this.state.pokemonIndex}</h5>
                             { this.state.imageLoading ? (
-                                <img src={loading} style={{width: "6em", height: "4em"}} className="card-img-top rounded mx-auto d-block mt-2 img-fluid" />
+                                <img src={loading} style={{width: "6em", height: "4em"}} alt="loading" className="card-img-top rounded mx-auto d-block mt-2 img-fluid" />
                             ) : null }
                             <Sprite
                             className="card-img-top rounded mx-auto mt-2 image-fluid"
@@ -81,14 +81,14 @@ componentDidMount() {
                                 </h6>
                             ) : null}
                             <div className="card-body mx-auto">
-                                <h6 className="card-title">{this.state.name
+                                <h4 className="card-title">{this.state.name
                                 .toLowerCase()
                                 .split(" ")
                                 .map(
                                     letter => letter.charAt(0).toUpperCase() + letter.substring(1)
                                 )
                                 .join(' ')}
-                                </h6>
+                                </h4>
                             </div>
                         </div>
                     </Card>
